@@ -1,0 +1,203 @@
+
+/* src/css/Home.css
+
+pdate filenames as needed.
+   ----------------------- */
+@font-face {
+  font-family: "Source Sans 3";
+  src: local("Source Sans 3"), url('../assets/fonts/SourceSans3-Regular.woff2') format('woff2'),
+       url('../assets/fonts/SourceSans3-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Source Sans 3";
+  src: local("Source Sans 3 Bold"), url('../assets/fonts/SourceSans3-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: bold;
+  font-display: swap;
+}
+
+/* Primary font helper: add .font-primary to root containers */
+.font-primary {
+  font-family: "Source Sans 3", Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* -----------------------
+   Base / utility resets
+   ----------------------- */
+* { box-sizing: border-box; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; }
+img { max-width: 100%; height: auto; display: block; }
+
+/* -----------------------
+   HERO
+   ----------------------- */
+/* src/css/Home.css */
+.hero {
+  position: relative; /* required for absolutely-positioned overlay children */
+  background-image: url('../../assets/imgi_1_hero-bg-default-full.png'); 
+  background-size: cover;
+  background-position: center;
+  min-height: calc(100vh - 15px);
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center; /* vertical centering */
+}
+
+/* On larger screens make it two-column */
+@media (min-width: 768px) {
+  .hero {
+    min-height: calc(100vh - 15px);
+    flex-direction: row;
+    align-items: center;
+    padding: 2rem 4rem;
+  }
+}
+
+/* -----------------------
+   Overlay card (left dark box)
+   ----------------------- */
+/* Avoid fixed widths/heights — use max- sizes so card remains readable on small screens */
+.overley {
+  width: 100%;
+  max-width: 520px;      /* matches design without forcing overflow */
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.85);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 2;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  margin: 0 auto;        /* center on very small screens */
+}
+
+/* Slightly larger padding on mid screens */
+@media (min-width: 640px) {
+  .overley { padding: 1.25rem; }
+}
+@media (min-width: 1024px) {
+  .overley { padding: 1.5rem; }
+}
+
+/* Optional fullscreen overlay e.g. modal darkening */
+.overley.full {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0,0,0,0.6);
+  z-index: 1;
+}
+
+/* Header and text inside overlay — keep responsive step sizes */
+.overley h1 {
+  font-size: 1.25rem; /* 20px */
+  line-height: 1.15;
+  margin-bottom: 0.5rem;
+}
+@media (min-width:768px){ .overley h1 { font-size: 1.875rem; /* 30px */ } }
+
+.overley p { font-size: 0.95rem; margin: 0.35rem 0; }
+@media (min-width:768px){ .overley p { font-size: 1.125rem; } }
+
+.overley strong { font-weight: 700; }
+.overley img { max-height: 32px; width: auto; }
+
+/* -----------------------
+   Cash offer container helper (if you want CSS instead of purely Tailwind)
+   ----------------------- */
+.cash-offer {
+  width: 100%;
+  max-width: 720px;
+  background: #E9ECEF;
+  border: 1px solid rgba(0,0,0,0.06);
+  padding: 1rem;
+  border-radius: 8px;
+  margin: 0 auto;
+}
+
+/* Form fields - provide consistent spacing on small screens */
+.cash-offer .field { margin-bottom: 0.75rem; }
+.cash-offer label { display:block; font-size:0.875rem; margin-bottom:0.35rem; color:#222; }
+.cash-offer input, .cash-offer textarea {
+  width:100%;
+  padding:0.6rem 0.75rem;
+  border:1px solid #d1d5db;
+  border-radius:6px;
+  font-size:0.95rem;
+  outline: none;
+}
+.cash-offer input:focus, .cash-offer textarea:focus {
+  box-shadow: 0 0 0 3px rgba(249,115,22,0.12); /* orange ring */
+  border-color: #f97316;
+}
+
+/* Button */
+.cash-offer .btn {
+  display:inline-block;
+  width:100%;
+  padding:0.7rem;
+  text-align:center;
+  background:#f97316;
+  color:#fff;
+  border-radius:6px;
+  font-weight:700;
+  border:0;
+  cursor:pointer;
+}
+.cash-offer .btn:active { transform: translateY(1px); }
+
+/* -----------------------
+   Main content & utilities
+   ----------------------- */
+.same-style {
+  font-size: 1rem; /* 16px mobile baseline */
+  line-height: 1.6; /* comfortable reading */
+  text-align: justify;
+  color: #212529;
+}
+
+/* headings */
+h2 { font-size: 1.25rem; margin-bottom: 0.5rem; }
+@media (min-width:768px){ h2 { font-size: 2.25rem; } }
+
+h3 { font-size: 1.125rem; margin-bottom: 0.5rem; }
+@media (min-width:768px){ h3 { font-size: 1.75rem; } }
+
+/* layout helpers for the main section */
+@media (min-width:768px){
+  .two-col { display: grid; grid-template-columns: 2fr 1fr; gap: 2rem; align-items:start; }
+}
+
+/* image card */
+.image-card {
+  background: #fff; border-radius: 8px; box-shadow: 0 8px 20px rgba(0,0,0,0.06); overflow: hidden;
+}
+
+/* list spacing */
+ul { padding-left: 1.25rem; margin-top: 0.5rem; margin-bottom: 0.5rem; }
+
+/* -----------------------
+   Small-screen tweaks (very narrow devices)
+   ----------------------- */
+@media (max-width: 359px) {
+  .overley h1 { font-size: 1.05rem; }
+  .same-style { font-size: 0.93rem; line-height: 1.5; }
+  .hero { padding: 0.75rem; }
+}
+
+/* -----------------------
+   Large-screen refinements
+   ----------------------- */
+@media (min-width: 1024px) {
+  .hero { padding: 3rem 6rem; }
+  .same-style { font-size: 1.125rem; }
+  .overley { max-width: 504px; } /* matches older design, but still flexible */
+}
+
+/* -----------------------
+   Helpful debugging utilities (remove in production if you want)
+   ----------------------- */
+.show-grid { outline: 1px dashed rgba(0,0,0,0.06); }

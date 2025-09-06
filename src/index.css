@@ -1,0 +1,17 @@
+/* src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: "Source Sans 3", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  }
+  /* Optional: adjust default body weight/line-height */
+  body {
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+  }
+}
