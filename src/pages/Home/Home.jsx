@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import '../css/Home.css';
-import { Listing, RecentPost, CashOffer } from "../../component/Export";
+import { Listing, RecentPost, CashOffer, Testimonials } from "../../component/Export";
 import { Link } from "react-router-dom";
 
 import arrowImg from "../../assets/imgi_2_arrow_right_01.png";
@@ -27,107 +27,109 @@ const Home = () => {
 
   return (
     <>
-    {/* HERO - mobile-first */}
-<section className="hero min-h-[70vh] md:min-h-[75vh] w-full flex flex-col md:flex-row items-center font-primary">
-  {/* Overlay/content column */}
-  <div className="flex justify-center w-full p-4 mb-40 md:w-1/2 md:justify-end md:pr-6">
-    <div className="overley min-w-[280px] sm:min-w-[400px] max-h-62 mb-8 sm:mb-16 md:mb-32 -mr-0 sm:-mr-5 md:-mr-10 w-full p-4 sm:p-6 md:p-8 bg-black/85 text-white rounded-none mt-8">
-      <h1 className="text-[20px] sm:text-[24px] md:text-[32px] font-bold leading-tight md:leading-[38px] mb-4">
-        Sell Your House Fast In Baton Rouge, LOUISIANA
-      </h1>
+    {/* HERO - exact design match */}
+<section 
+  className="relative min-h-[100vh] w-full bg-cover bg-center bg-no-repeat font-primary fixed"
+  style={{ backgroundImage: `url('/hero.jpg')` }}
+>
+  <div className="flex flex-col min-h-[100vh] md:flex-row md:gap-2">
+    {/* Left side - Black overlay with content */}
+    <div className="flex items-center justify-center p-4 w-full md:ml-20 md:justify-start md:p-2 md:w-1/2 md:p-4 lg:p-6 md:-mt-24">
+      <div className="w-full max-w-sm p-4 bg-black/90 text-white md:max-w-lg md:p-4 md:p-6">
+        <h1 className="text-[20px] sm:text-[22px] md:text-[28px] lg:text-[32px] font-bold leading-tight mb-3 md:mb-4">
+          Sell Your House Fast In Baton Rouge, LOUISIANA
+        </h1>
 
-      <p className="text-[14px] sm:text-[16px] md:text-[18px] py-2 leading-relaxed">
-        <strong>No</strong> Fees. <strong>No</strong> Commissions. Put More Cash In
-        Your Pocket.
-      </p>
+        <p className="text-[14px] sm:text-[15px] md:text-[18px] py-1 md:py-2 leading-relaxed font-bold">
+          <strong>No</strong> Fees. <strong>No</strong> Commissions. Put More Cash In Your Pocket.
+        </p>
 
-      <p className="text-[14px] sm:text-[16px] md:text-[18px] py-2 leading-relaxed">
-        Flooded House? Need Repairs? Tired of tenants? Inherited house?
-        <strong>
-          {" "}
-          <u>
-            <b>SELL TO US!!</b>
-          </u>
+        <p className="text-[14px] sm:text-[15px] md:text-[18px] py-1 md:py-2 leading-relaxed">
+          Flooded House? Need Repairs? Tired of tenants? Inherited house?
+          <strong>
+            {" "}
+            <u>
+              <b>SELL TO US!!</b>
+            </u>
+          </strong>
+        </p>
+
+        <strong className="text-[16px] sm:text-[18px] md:text-[22px] md:text-[24px] block pb-3 md:pb-4 mt-3 md:mt-4 leading-relaxed">
+          You'll Get A Fair Offer – You Choose The Closing Date. We Pay All Costs!
         </strong>
-      </p>
 
-      <strong className="text-[15px] sm:text-[17px] md:text-[20px] block pb-4 mt-3 leading-relaxed">
-        You'll Get A Fair Offer – You Choose The Closing Date. We Pay All Costs!
-      </strong>
-
-      <div className="flex items-center gap-2 mt-4 sm:gap-4">
-        <p className="text-[13px] sm:text-[15px] font-medium">Fill out the short form…</p>
-        <img src={arrowImg} alt="arrow" className="object-contain w-12 h-12 ml-4 sm:w-16 sm:h-16 md:w-20 md:h-20 sm:ml-10 md:ml-20" />
+        <div className="flex flex-col gap-2 whitespace-nowrap md:flex-row md:items-center md:gap-0">
+          <p className="text-[14px] sm:text-[15px] md:text-[16px] font-medium">Fill out the short form…</p>
+          <img src={arrowImg} alt="arrow" className="object-contain  w-16 h-16 sm:w-20 sm:h-20 md:w-48 md:h-48 md:ml-24 md:-mb-20 md:-mt-20" />
+        </div>
       </div>
     </div>
-  </div>
 
-  {/* ----------  CASH-OFFER FORM – pixel match  ---------- */}
-  <div className="flex justify-center w-full p-4 mb-8 sm:mb-16 md:mb-26 md:w-1/2 md:justify-start md:pl-8">
-    <div className="w-full max-w-xl">
-      <div className="p-6 bg-white rounded-none shadow-lg sm:p-8 md:p-10">
-
-        {/* 1.  Bold heading */}
-        <h3 className="text-[20px] sm:text-[22px] md:text-[24px] font-black text-center text-gray-900 mb-2">
+    {/* Right side - White form card */}
+    <div className="flex items-center justify-center w-full p-4 md:p-2 md:-ml-36 md:w-1/2 md:p-4 lg:p-6">
+      <div className="w-full max-w-sm p-4 bg-white shadow-xl rounded-none sm:max-w-md sm:p-5 md:mt-12 md:max-w-lg md:p-6 md:p-8">
+        {/* Form heading */}
+        <h3 className="text-[18px] sm:text-[19px] md:text-[20px] md:text-[24px] font-bold text-center text-gray-900 mb-2 md:mb-3">
           What Do You Have To Lose? Get Started Now...
         </h3>
 
-        {/* 2.  Sub-text */}
-        <p className="text-[16px] sm:text-[17px] md:text-[18px] text-gray-700 text-center mb-5 leading-[1.45]">
-          We buy houses in <strong>ANY CONDITION</strong> in LOUISIANA.
-          There are no commissions or fees and no obligation whatsoever.
-          Start below by giving us a bit of information about your property or call
-          <strong> (225) 772-2747</strong>...
+        {/* Sub-text */}
+        <p className="text-[14px] sm:text-[14px] md:text-[18px] md:text-[16px] text-gray-700 text-center mb-4 md:mb-6 leading-relaxed">
+          We buy houses in <strong>ANY CONDITION</strong> in LOUISIANA. There are no commissions and no obligation whatsoever. Start below by giving us a bit of information about your property or call<strong>(225) 772-2747</strong>...
         </p>
 
-        {/* 3.  Form */}
-        <form onSubmit={handleFormSubmit} className="space-y-3">
-
-          {/* Property Address (full-width first) */}
-          <input
-            type="text"
-            placeholder="Property Address *"
-            required
-            className="w-full h-[44px] sm:h-[46px] md:h-[48px] px-3 sm:px-4 border border-gray-400 rounded-[4px] text-[14px] sm:text-[15px]
-                       focus:outline-none focus:border-blue-500"
-          />
-
-          {/* 2 fields on one row - responsive grid */}
-          <div className="grid grid-cols-1 gap-3 xs:grid-cols-2">
+        {/* Form */}
+        <form onSubmit={handleFormSubmit} className="space-y-3 md:space-y-4">
+          {/* Property Address */}
+          <div>
+            <label className="block text-xs sm:text-sm font-medium text-gray-700 mb-1">Property Address *</label>
             <input
-              type="email"
-              placeholder="Email *"
+              type="text"
+              placeholder="Enter Your Address"
               required
-              className="w-full h-[44px] sm:h-[46px] md:h-[48px] px-3 sm:px-4 border border-gray-400 rounded-[4px] text-[14px] sm:text-[15px]
-                         focus:outline-none focus:border-blue-500"
-            />
-            <input
-              type="tel"
-              placeholder="Phone *"
-              required
-              className="w-full h-[44px] sm:h-[46px] md:h-[48px] px-3 sm:px-4 border border-gray-400 rounded-[4px] text-[14px] sm:text-[15px]
-                         focus:outline-none focus:border-blue-500"
+              className="w-full h-[40px] sm:h-[44px] md:h-[48px] px-3 sm:px-4 border border-gray-300 rounded-md text-[13px] sm:text-[14px] md:text-[15px] focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
             />
           </div>
 
-          {/* reCAPTCHA - responsive sizing */}
-          <div className="flex justify-center mt-2">
-            <ReCAPTCHA
-              ref={recaptchaRef}
-              sitekey="6LcRYcArAAAAAGDKZrl7FIl0mar5xzipjZTOM8Hi"
-              onChange={handleRecaptchaChange}
-              size="normal"
-              className="origin-center transform scale-75 sm:scale-90 md:scale-100"
-            />
+          {/* Phone and Email row */}
+          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 md:gap-4">
+            <div>
+              <label className="block text-xs sm:text-sm font-medium text-gray-700 mb-1">Phone *</label>
+              <input
+                type="tel"
+                required
+                className="w-full h-[40px] sm:h-[44px] md:h-[48px] px-3 sm:px-4 border border-gray-300 rounded-md text-[13px] sm:text-[14px] md:text-[15px] focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+              />
+            </div>
+            <div>
+              <label className="block text-xs sm:text-sm font-medium text-gray-700 mb-1">Email *</label>
+              <input
+                type="email"
+                required
+                className="w-full h-[40px] sm:h-[44px] md:h-[48px] px-3 sm:px-4 border border-gray-300 rounded-md text-[13px] sm:text-[14px] md:text-[15px] focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+              />
+            </div>
           </div>
 
-          {/* CTA button */}
+          {/* CAPTCHA */}
+          <div>
+            <div className="flex justify-center">
+              <ReCAPTCHA
+                ref={recaptchaRef}
+                sitekey="6LcRYcArAAAAAGDKZrl7FIl0mar5xzipjZTOM8Hi"
+                onChange={handleRecaptchaChange}
+                size="normal"
+                className="transform scale-75 sm:scale-85 md:scale-90 md:scale-100"
+              />
+            </div>
+          </div>
+
+          {/* Submit button */}
           <button
             type="submit"
-            className="w-full h-[48px] sm:h-[50px] md:h-[52px] bg-[#ec7b03] hover:bg-[#d46b02] text-white
-                       font-black text-[15px] sm:text-[16px] md:text-[17px] rounded-[4px] transition-colors"
+            className="w-full h-[44px] sm:h-[48px] md:h-[52px] bg-[#ff8c42] hover:bg-[#e67a35] text-white font-bold text-[14px] sm:text-[15px] md:text-[16px] rounded-md transition-colors"
           >
-            Get My Fair Cash Offer >>
+            Get My Fair Cash Offer ››
           </button>
         </form>
       </div>
@@ -232,6 +234,19 @@ const Home = () => {
           <p className="text-[18px] mt-2 md:text-[18px] mb-8 leading-relaxed text-gray-700">
            <span className="underline">If you simply don’t want to put up with the hassle of owning that house any longer, and if you don’t want to put up with the hassle and time-consuming expense of selling your property the traditional way, let us know about the property you’d like to be rid of and sell your house fast for cash.</span>  Talk to someone in our office before submitting your property information by <b>calling us today at (225) 772-2747</b> 
           </p>
+
+      
+     
+       
+          <p className="text-[18px] mt-2 md:text-[18px] mb-8 leading-relaxed text-gray-700 opacity-70 blur-[0.3px]">
+           <i>
+           We buy houses in <strong>Baton Rouge, LOUISIANA 70810</strong> and all surrounding areas in 
+            <strong> LOUISIANA</strong>. If you need to sell your house fast in <strong>LOUISIANA</strong>, connect with us… we'd love 
+            to make you a fair no-obligation no-hassle offer. <em>Take it or leave it. You've got nothing to 
+            lose</em> 😊
+            </i> 
+          </p>
+        
           
           </main>
 
@@ -241,12 +256,23 @@ const Home = () => {
               <Listing />
             </div>
 
+            <div className="mt-2 mb-8">
+              <Testimonials />
+            </div>
+
+            <div className="mt-2 mb-8">
+              <CashOffer />
+            </div>
+
             <div>
               <RecentPost />
             </div>
+            
           </aside>
         </div>
       </section>
+
+      
     </>
   );
 };

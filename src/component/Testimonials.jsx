@@ -1,7 +1,7 @@
 import React from "react";
 import forbesLogo from "../assets/imgi_4_Forbes-Logo.jpg";
 
-const TestimonialCard = () => {
+const Testimonial = () => {
   return (
     <div className="max-w-xs bg-[#F8F8F8] rounded-lg shadow-sm border border-gray-200 p-6 mx-auto font-primary">
       {/* Title */}
@@ -33,4 +33,4 @@ const TestimonialCard = () => {
   );
 };
 
-export default TestimonialCard;
+export default Testimonial;

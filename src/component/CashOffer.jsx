@@ -4,7 +4,7 @@ import ReCAPTCHA from "react-google-recaptcha";
 const CashOffer = ({
   title,
   description,
-  containerClass = "w-full bg-[#E9ECEF] border border-gray-300 p-6 md:p-8 font-primary",
+  containerClass = "w-full max-w-2xl bg-[#E9ECEF] border border-gray-300 p-6 md:p-8 font-primary",
   titleClass = "text-base md:text-lg font-bold mb-2",
   descriptionClass = "text-darkGray text-[14px] lg:text-[16px] leading-[28px] lg:leading-[30px]",
   inputClass = "w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-orange-400",
@@ -70,11 +70,11 @@ const CashOffer = ({
         {/* CAPTCHA (real reCAPTCHA) */}
         <div>
           <label className="block mb-1 text-sm font-medium">CAPTCHA</label>
-          <div className="w-12">
+          <div className="flex justify-center">
             <ReCAPTCHA
               sitekey="6LcRYcArAAAAAGDKZrl7FIl0mar5xzipjZTOM8Hi"
               onChange={handleCaptchaChange}
-              className="w-8"
+              className="transform scale-90 origin-center"
             />
           </div>
         </div>
