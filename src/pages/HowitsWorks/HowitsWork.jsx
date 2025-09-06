@@ -26,7 +26,7 @@ const HowitsWorks = () => {
       <div className="flex flex-col py-8 bg-white lg:flex-row lg:py-12">
         {/* ---------------- LEFT SIDE (steps) ---------------- */}
         <div className="flex-1 mb-8 lg:pr-8 lg:mb-0">
-          <h2 className="mb-6 text-3xl font-bold text-center text-gray-800 sm:text-4xl lg:text-5xl lg:text-left">
+          <h2 className="mb-6 text-4xl font-bold text-center text-gray-800 sm:text-5xl lg:text-6xl lg:text-left">
             How The Process Works
           </h2>
 
@@ -34,7 +34,7 @@ const HowitsWorks = () => {
           <div className="flex mb-6">
             <div className="flex-shrink-0 w-20 md:w-24">
               <div className="mb-2">
-                <span className="text-base font-bold text-gray-400 md:text-lg">STEP 1</span>
+                <span className="text-xl font-bold text-gray-400 md:text-xl">STEP 1</span>
               </div>
               <div className="flex">
                 <div className="w-4 h-1 mr-1 bg-green-400" />
@@ -43,7 +43,7 @@ const HowitsWorks = () => {
               </div>
             </div>
             <div className="ml-4 md:ml-6">
-              <p className="text-lg font-bold text-black md:text-xl">
+              <p className="text-xl font-bold text-black md:text-xl">
                 Tell us about your property –{' '}
                 <span className="text-red-600">Quick, Easy & Free!</span>
               </p>
@@ -54,7 +54,7 @@ const HowitsWorks = () => {
           <div className="flex mb-6">
             <div className="flex-shrink-0 w-20 md:w-24">
               <div className="mb-2">
-                <span className="text-base font-bold text-gray-400 md:text-lg">STEP 2</span>
+                <span className="text-xl font-bold text-gray-400 md:text-xl">STEP 2</span>
               </div>
               <div className="flex">
                 <div className="w-4 h-1 mr-1 bg-green-400" />
@@ -63,7 +63,7 @@ const HowitsWorks = () => {
               </div>
             </div>
             <div className="ml-4 md:ml-6">
-              <p className="text-lg font-bold text-black md:text-xl">
+              <p className="text-xl font-bold text-black md:text-xl">
                 If it meets our buying criteria, we'll contact you to set up a
                 quick appointment
               </p>
@@ -74,7 +74,7 @@ const HowitsWorks = () => {
           <div className="flex mb-6">
             <div className="flex-shrink-0 w-20 md:w-24">
               <div className="mb-2">
-                <span className="text-base font-bold text-gray-400 md:text-lg">STEP 3</span>
+                <span className="text-xl font-bold text-gray-400 md:text-xl">STEP 3</span>
               </div>
               <div className="flex">
                 <div className="w-4 h-1 mr-1 bg-green-400" />
@@ -84,7 +84,7 @@ const HowitsWorks = () => {
               </div>
             </div>
             <div className="ml-4 md:ml-6">
-              <p className="text-lg font-bold text-black md:text-xl">
+              <p className="text-xl font-bold text-black md:text-xl">
                 We'll present you w/ a fair written,{' '}
                 <span className="text-red-600">no-obligation offer</span>
               </p>
@@ -95,7 +95,7 @@ const HowitsWorks = () => {
           <div className="flex mb-8">
             <div className="flex-shrink-0 w-20 md:w-24">
               <div className="mb-2">
-                <span className="text-base font-bold text-gray-400 md:text-lg">STEP 4</span>
+                <span className="text-xl font-bold text-gray-400 md:text-lg">STEP 4</span>
               </div>
               <div className="flex">
                 <div className="w-4 h-1 mr-1 bg-green-400" />
@@ -105,7 +105,7 @@ const HowitsWorks = () => {
               </div>
             </div>
             <div className="ml-4 md:ml-6">
-              <p className="text-lg font-bold text-black md:text-xl">
+              <p className="text-xl font-bold text-black md:text-xl">
                 We close at a local reputable title company, cash in your hands
                 in as little as 7 days
               </p>

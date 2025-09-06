@@ -27,11 +27,11 @@ export default function Compare() {
       <div className="w-full max-w-5xl mx-auto">
         {/* Title (centered like the reference) */}
         <header className="mb-8 text-center">
-          <h1 className="text-2xl font-semibold leading-tight text-gray-900 sm:text-3xl lg:text-4xl">
+          <h1 className="text-3xl font-semibold leading-tight text-gray-900 sm:text-4xl lg:text-5xl">
             Selling To Red Stick Property Solutions LLC vs. Listing With A Local{" "}
             <span className="uppercase">LOUISIANA</span> Agent
           </h1>
-          <p className="max-w-4xl mx-auto mt-4 text-sm leading-relaxed text-gray-700 sm:text-base">
+          <p className="max-w-4xl mx-auto mt-4 text-2xl! leading-relaxed text-gray-700 sm:text-base">
             Even in a sellers market like L.A., it's smart to look at your
             options and see what will actually help you best reach your goals
             with the sale of your house. While you may be able to get a higher
@@ -156,20 +156,20 @@ export default function Compare() {
 
         {/* Body copy (centered width, matches reference spacing) */}
         <section className="mx-auto mb-10 space-y-6 text-left max-w-none">
-          <h2 className="mb-6 text-2xl font-bold text-center text-gray-900 sm:text-3xl">
+          <h2 className="mb-6 text-3xl font-bold text-center text-gray-900 sm:text-4xl">
             Work The Numbers And See Which Way Helps You Get There…
           </h2>
           <div className="space-y-4 text-gray-700">
-            <p className="text-sm leading-relaxed sm:text-base">
+            <p className="text-xl leading-relaxed sm:text-base">
               When you really work the numbers you start to see the real benefits
               that each way of selling your LOUISIANA house offers.
             </p>
-            <p className="text-sm leading-relaxed sm:text-base">
+            <p className="text-xl leading-relaxed sm:text-base">
               Yes, here at Red Stick Property Solutions LLC we won't be able to offer you full
               retail value for your house... but we also offer other benefits that
               going the traditional house sale route can't offer.
             </p>
-            <p className="text-sm font-bold leading-relaxed sm:text-base">
+            <p className="text-xl font-bold leading-relaxed sm:text-base">
               Like…
             </p>
           </div>
