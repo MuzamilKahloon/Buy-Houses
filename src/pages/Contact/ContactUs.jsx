@@ -6,30 +6,30 @@ import guideImg from "../../assets/imgi_1_5-ways-foreclosure.png";
 import { Listing, RecentPost } from "../../component/Export";
 export default function ContactPage() {
   return (
-    <div className="min-h-screen bg-white sm:px-4 md:px-6 lg:px-8 py-8 font-primary">
+    <div className="min-h-screen py-8 bg-white sm:px-4 md:px-6 lg:px-8 font-primary">
       {/* Main layout */}
       <div className="max-w-6xl mx-auto px-[6%] md:flex md:gap-12">
         {/* LEFT SIDE (Connect With Us) */}
-        <div className="md:flex-1 md:mt-12 space-y-6">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+        <div className="space-y-6 md:flex-1 md:mt-12">
+          <h2 className="text-3xl font-bold text-gray-900 md:text-4xl">
             Connect With Us!
           </h2>
 
-          <p className="text-gray-700 leading-relaxed">
+          <p className="text-lg leading-relaxed text-gray-700">
             Have some questions you want to ask us?
           </p>
 
-          <p className="text-gray-700 leading-relaxed">
+          <p className="text-lg leading-relaxed text-gray-700">
             Excellent! We love talking with people to see how we can help you
             reach your goals.
           </p>
 
-          <p className="text-gray-700 leading-relaxed">
+          <p className="text-lg leading-relaxed text-gray-700">
             If you have questions about…
           </p>
 
           {/* Bullet list */}
-          <ul className="list-disc list-inside space-y-2 text-gray-700">
+          <ul className="space-y-2 text-lg text-gray-700 list-disc list-inside">
             <li>
               Our process for making you an{" "}
               <span className="font-bold">all cash offer for your house</span>
@@ -38,7 +38,7 @@ export default function ContactPage() {
               Our process for helping homeowners{" "}
               <a
                 href="#foreclosure"
-                className="text-blue-600 hover:text-blue-800 underline"
+                className="text-blue-600 underline hover:text-blue-800"
               >
                 stop foreclosure in Baton Rouge
               </a>{" "}
@@ -54,22 +54,22 @@ export default function ContactPage() {
             </li>
           </ul>
 
-          <p className="text-gray-700 leading-relaxed">
+          <p className="text-lg leading-relaxed text-gray-700">
             Just give us a ring at the phone number below or shoot us an email
             through the form. We’ll get back to you within 48 hours. If you need
             us quicker, make sure to call as we’re able to answer phone calls
             more quickly than we’re able to return emails.
           </p>
 
-          <p className="text-gray-700 leading-relaxed">Chat with you soon!</p>
+          <p className="text-lg leading-relaxed text-gray-700">Chat with you soon!</p>
 
           {/* Contact Info */}
           <div className="pt-6 space-y-2">
             <h3 className="text-xl font-bold text-gray-900">Contact Info:</h3>
-            <p className="text-gray-700">Red Stick Property Solutions LLC</p>
-            <p className="text-gray-700">17347 Cherry Creek Dr</p>
-            <p className="text-gray-700">Prairieville, LA 70769</p>
-            <p className="text-gray-700 font-medium">(225) 772-2747</p>
+            <p className="text-lg text-gray-700">Red Stick Property Solutions LLC</p>
+            <p className="text-lg text-gray-700">17347 Cherry Creek Dr</p>
+            <p className="text-lg text-gray-700">Prairieville, LA 70769</p>
+            <p className="text-lg font-medium text-gray-700">(225) 772-2747</p>
           </div>
           <CashOffer
             title="Contact Us"
@@ -78,25 +78,25 @@ export default function ContactPage() {
             buttonClass="mt-2 bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 rounded-md transition-colors duration-300"
           />
 
-          <div className="max-w-3xl mx-auto px-4 py-8">
+          <div className="max-w-3xl px-4 py-8 mx-auto">
             {/* Title */}
-            <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-4">
+            <h2 className="mb-4 text-xl font-bold text-gray-900 md:text-2xl">
               5 Ways To Stop or Avoid Foreclosure In Today’s Market – FREE
               Guide:
             </h2>
 
-            <div className="flex flex-col md:flex-row gap-4">
+            <div className="flex flex-col gap-4 md:flex-row">
               {/* Image */}
               <div className="flex-shrink-0">
                 <img
                   src={guideImg}
                   alt="Free Guide"
-                  className="w-32 md:w-40 rounded-md shadow-md"
+                  className="w-32 rounded-md shadow-md md:w-40"
                 />
               </div>
 
               {/* Text Content */}
-              <div className="text-gray-700 text-sm md:text-base leading-relaxed">
+              <div className="text-lg leading-relaxed text-gray-700">
                 <p>
                   Need more information on the foreclosure process and{" "}
                   <span className="font-bold">How To Stop Foreclosure?</span>{" "}
@@ -122,21 +122,21 @@ export default function ContactPage() {
             </div>
 
             {/* Social buttons with react-icons */}
-            <div className=" flex items-center gap-2 pt-12">
+            <div className="flex items-center gap-2 pt-12">
               {/* Facebook button */}
-              <button className="flex items-center gap-2 bg-[#3b5998] text-white px-1 py-[1px] rounded-md hover:bg-[#2d4373] transition">
+              <button className="flex items-center gap-2 bg-[#3b5998] text-white px-3 py-2 rounded-md hover:bg-[#2d4373] transition">
                 {/* Icon always visible */}
-                <FaFacebookF size={14} />
+                <FaFacebookF size={16} />
                 {/* Text hidden on mobile, visible on md+ */}
-                <span className="hidden md:inline  md:text-[14px]  md:leading-[22px]">
+                <span className="hidden text-sm md:inline">
                   Share
                 </span>
               </button>
 
               {/* Cross button */}
-              <button className="flex items-center gap-2 bg-black text-white px-1 py-[1px] rounded-md hover:bg-darkGray transition">
-                <FaXTwitter size={14} />
-                <span className="hidden md:inline text-[14px] md:text-[16px] leading-[20px] md:leading-[22px]">
+              <button className="flex items-center gap-2 px-3 py-2 text-white transition bg-black rounded-md hover:bg-darkGray">
+                <FaXTwitter size={16} />
+                <span className="hidden text-sm md:inline">
                   Share
                 </span>
               </button>
@@ -145,7 +145,7 @@ export default function ContactPage() {
         </div>
 
         {/* RIGHT SIDE (Cards + Cash Offer, keep as before) */}
-        <div className="md:w-1/3 flex flex-col gap-6 mt-10 md:mt-0">
+        <div className="flex flex-col gap-6 mt-10 md:w-1/3 md:mt-0">
           <Listing />
           <CashOffer
             title="Get Your Fair Cash Offer Today!"

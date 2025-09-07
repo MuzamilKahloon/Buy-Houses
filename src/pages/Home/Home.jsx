@@ -29,22 +29,22 @@ const Home = () => {
     <>
     {/* HERO - exact design match */}
 <section 
-  className="relative min-h-[100vh] w-full bg-cover bg-center bg-no-repeat font-primary fixed"
+  className="relative min-h-[138vh] overflow-y-hidden w-full bg-cover bg-center bg-no-repeat font-primary "
   style={{ backgroundImage: `url('/hero.jpg')` }}
 >
   <div className="flex flex-col min-h-[100vh] md:flex-row md:gap-2">
     {/* Left side - Black overlay with content */}
-    <div className="flex items-center justify-center p-4 w-full md:ml-20 md:justify-start md:p-2 md:w-1/2 md:p-4 lg:p-6 md:-mt-24">
-      <div className="w-full max-w-sm p-4 bg-black/90 text-white md:max-w-lg md:p-4 md:p-6">
-        <h1 className="text-[20px] sm:text-[22px] md:text-[28px] lg:text-[32px] font-bold leading-tight mb-3 md:mb-4">
+    <div className="flex items-center justify-center w-full p-4 md:ml-20 md:justify-start md:p-2 md:w-1/2 md:p-4 lg:p-6 md:-mt-24">
+      <div className="w-full max-w-sm p-4 text-white bg-black/90 md:max-w-lg md:p-4 md:p-6">
+        <h1 className="text-[18px] sm:text-[22px] md:text-[28px] lg:text-[32px] font-bold leading-tight mb-3 md:mb-4">
           Sell Your House Fast In Baton Rouge, LOUISIANA
         </h1>
 
-        <p className="text-[14px] sm:text-[15px] md:text-[18px] py-1 md:py-2 leading-relaxed font-bold">
+        <p className="text-[13px] sm:text-[15px] md:text-[18px] py-1 md:py-2 leading-relaxed font-bold">
           <strong>No</strong> Fees. <strong>No</strong> Commissions. Put More Cash In Your Pocket.
         </p>
 
-        <p className="text-[14px] sm:text-[15px] md:text-[18px] py-1 md:py-2 leading-relaxed">
+        <p className="text-[13px] sm:text-[15px] md:text-[18px] py-1 md:py-2 leading-relaxed">
           Flooded House? Need Repairs? Tired of tenants? Inherited house?
           <strong>
             {" "}
@@ -54,27 +54,27 @@ const Home = () => {
           </strong>
         </p>
 
-        <strong className="text-[16px] sm:text-[18px] md:text-[22px] md:text-[24px] block pb-3 md:pb-4 mt-3 md:mt-4 leading-relaxed">
+        <strong className="text-[14px] sm:text-[18px] md:text-[22px] md:text-[24px] block pb-3 md:pb-4 mt-3 md:mt-4 leading-relaxed">
           You'll Get A Fair Offer – You Choose The Closing Date. We Pay All Costs!
         </strong>
 
         <div className="flex flex-col gap-2 whitespace-nowrap md:flex-row md:items-center md:gap-0">
-          <p className="text-[14px] sm:text-[15px] md:text-[16px] font-medium">Fill out the short form…</p>
-          <img src={arrowImg} alt="arrow" className="object-contain  w-16 h-16 sm:w-20 sm:h-20 md:w-48 md:h-48 md:ml-24 md:-mb-20 md:-mt-20" />
+          <p className="text-[13px] sm:text-[15px] md:text-[16px] font-medium">Fill out the short form…</p>
+          <img src={arrowImg} alt="arrow" className="object-contain w-12 h-12 sm:w-20 sm:h-20 md:w-48 md:h-48 md:ml-24 md:-mb-20 md:-mt-20" />
         </div>
       </div>
     </div>
 
     {/* Right side - White form card */}
-    <div className="flex items-center justify-center w-full p-4 md:p-2 md:-ml-36 md:w-1/2 md:p-4 lg:p-6">
-      <div className="w-full max-w-sm p-4 bg-white shadow-xl rounded-none sm:max-w-md sm:p-5 md:mt-12 md:max-w-lg md:p-6 md:p-8">
+    <div className="flex items-center justify-center w-full p-4 -mb-16 md:p-2 md:-ml-36 md:w-1/2 md:p-4 lg:p-6">
+      <div className="w-full max-w-sm p-4 bg-white rounded-none shadow-xl sm:max-w-md sm:p-5 md:mt-12 md:max-w-lg md:p-6 md:p-8">
         {/* Form heading */}
-        <h3 className="text-[18px] sm:text-[19px] md:text-[20px] md:text-[24px] font-bold text-center text-gray-900 mb-2 md:mb-3">
+        <h3 className="text-[16px] sm:text-[19px] md:text-[20px] md:text-[24px] font-bold text-center text-gray-900 mb-2 md:mb-3">
           What Do You Have To Lose? Get Started Now...
         </h3>
 
         {/* Sub-text */}
-        <p className="text-[14px] sm:text-[14px] md:text-[18px] md:text-[16px] text-gray-700 text-center mb-4 md:mb-6 leading-relaxed">
+        <p className="text-[13px] sm:text-[14px] md:text-[18px] md:text-[16px] text-gray-700 text-center mb-4 md:mb-6 leading-relaxed">
           We buy houses in <strong>ANY CONDITION</strong> in LOUISIANA. There are no commissions and no obligation whatsoever. Start below by giving us a bit of information about your property or call<strong>(225) 772-2747</strong>...
         </p>
 
@@ -82,31 +82,31 @@ const Home = () => {
         <form onSubmit={handleFormSubmit} className="space-y-3 md:space-y-4">
           {/* Property Address */}
           <div>
-            <label className="block text-xs sm:text-sm font-medium text-gray-700 mb-1">Property Address *</label>
+            <label className="block mb-1 text-xs font-medium text-gray-700 sm:text-sm">Property Address *</label>
             <input
               type="text"
               placeholder="Enter Your Address"
               required
-              className="w-full h-[40px] sm:h-[44px] md:h-[48px] px-3 sm:px-4 border border-gray-300 rounded-md text-[13px] sm:text-[14px] md:text-[15px] focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+              className="w-full h-[38px] sm:h-[44px] md:h-[48px] px-3 sm:px-4 border border-gray-300 rounded-md text-[13px] sm:text-[14px] md:text-[15px] focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
             />
           </div>
 
           {/* Phone and Email row */}
           <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 md:gap-4">
             <div>
-              <label className="block text-xs sm:text-sm font-medium text-gray-700 mb-1">Phone *</label>
+              <label className="block mb-1 text-xs font-medium text-gray-700 sm:text-sm">Phone *</label>
               <input
                 type="tel"
                 required
-                className="w-full h-[40px] sm:h-[44px] md:h-[48px] px-3 sm:px-4 border border-gray-300 rounded-md text-[13px] sm:text-[14px] md:text-[15px] focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                className="w-full h-[38px] sm:h-[44px] md:h-[48px] px-3 sm:px-4 border border-gray-300 rounded-md text-[13px] sm:text-[14px] md:text-[15px] focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
               />
             </div>
             <div>
-              <label className="block text-xs sm:text-sm font-medium text-gray-700 mb-1">Email *</label>
+              <label className="block mb-1 text-xs font-medium text-gray-700 sm:text-sm">Email *</label>
               <input
                 type="email"
                 required
-                className="w-full h-[40px] sm:h-[44px] md:h-[48px] px-3 sm:px-4 border border-gray-300 rounded-md text-[13px] sm:text-[14px] md:text-[15px] focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                className="w-full h-[38px] sm:h-[44px] md:h-[48px] px-3 sm:px-4 border border-gray-300 rounded-md text-[13px] sm:text-[14px] md:text-[15px] focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
               />
             </div>
           </div>
@@ -119,7 +119,7 @@ const Home = () => {
                 sitekey="6LcRYcArAAAAAGDKZrl7FIl0mar5xzipjZTOM8Hi"
                 onChange={handleRecaptchaChange}
                 size="normal"
-                className="transform scale-75 sm:scale-85 md:scale-90 md:scale-100"
+                className="transform scale-70 sm:scale-85 md:scale-90 md:scale-100"
               />
             </div>
           </div>
@@ -127,7 +127,7 @@ const Home = () => {
           {/* Submit button */}
           <button
             type="submit"
-            className="w-full h-[44px] sm:h-[48px] md:h-[52px] bg-[#ff8c42] hover:bg-[#e67a35] text-white font-bold text-[14px] sm:text-[15px] md:text-[16px] rounded-md transition-colors"
+            className="w-full h-[40px] sm:h-[48px] md:h-[52px] bg-[#ff8c42] hover:bg-[#e67a35] text-white font-bold text-[13px] sm:text-[15px] md:text-[16px] rounded-md transition-colors"
           >
             Get My Fair Cash Offer ››
           </button>
