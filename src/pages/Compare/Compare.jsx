@@ -22,16 +22,18 @@ export default function Compare() {
   }, []);
 
   return (
-    <main className="min-h-screen bg-white font-primary text-darkGray px-4 py-8 sm:px-6 md:px-8 lg:px-[100px]">
+    <main className="min-h-screen mt-6 bg-white font-primary text-darkGray px-4 py-8 sm:px-6 md:px-8 lg:px-[100px]">
       {/* Centered container that mimics the reference width/centered look */}
       <div className="w-full max-w-5xl mx-auto">
         {/* Title (centered like the reference) */}
         <header className="mb-8 text-center">
-          <h1 className="text-3xl font-semibold leading-tight text-gray-900 sm:text-4xl lg:text-5xl">
+          <h1 className="text-2xl font-extrabold leading-tight text-justify text-gray-900 sm:text-3xl lg:text-4xl">
             Selling To Red Stick Property Solutions LLC vs. Listing With A Local{" "}
             <span className="uppercase">LOUISIANA</span> Agent
           </h1>
-          <p className="max-w-4xl mx-auto mt-4 text-2xl! leading-relaxed text-gray-700 sm:text-base">
+          
+        </header>
+        <p className="ml-0 -mt-6 text-justify text-gray-900 md:text-lg sm:text-base">
             Even in a sellers market like L.A., it's smart to look at your
             options and see what will actually help you best reach your goals
             with the sale of your house. While you may be able to get a higher
@@ -39,10 +41,9 @@ export default function Compare() {
             doesn't always boil down to more money in your pocket or less
             headache. <span className="font-bold">Dive into the details below to compare your options.</span>
           </p>
-        </header>
 
         {/* Comparison Card (table centered and responsive) */}
-        <section className="mb-10 overflow-hidden bg-white border-2 border-gray-300 rounded-none shadow-none">
+        <section className="mb-16 overflow-hidden bg-white border-2 border-gray-300 rounded-none shadow-none md:mt-10">
           <div className="p-0">
             <div className="overflow-x-auto">
               {/* The table itself is constrained and centered */}
@@ -51,22 +52,22 @@ export default function Compare() {
                   <thead className="bg-gray-100">
                     <tr className="text-left border-b-2 border-gray-300">
                       <th className="w-1/3 px-6 py-4 font-semibold text-gray-900"></th>
-                      <th className="px-6 py-4 font-semibold text-center text-gray-900">Selling w/ An Agent</th>
-                      <th className="px-6 py-4 font-bold text-center text-gray-900">
-                        SOLD To Red Stick Property Solutions LLC
+                      <th className="px-6 py-4 text-lg font-bold text-center text-gray-900">Selling w/ An Agent</th>
+                      <th className="px-6 py-4 text-lg font-bold text-center text-gray-900">
+                        SOLD to Red Stick Property Solutions LLC
                       </th>
                     </tr>
                   </thead>
 
                   <tbody className="divide-y divide-gray-300">
                     <tr className="align-top border-b border-gray-300">
-                      <td className="px-6 py-4 text-sm font-bold text-gray-900 sm:text-base bg-gray-50">
+                      <td className="px-6 py-4 text-lg font-bold text-gray-900 sm:text-lg bg-gray-50">
                         Commissions / Fees:
                       </td>
-                      <td className="px-6 py-4 text-sm text-gray-700 sm:text-base">
+                      <td className="px-6 py-4 text-lg text-gray-700 sm:text-lg">
                         <span className="underline">6%</span> on average is paid by you, the seller
                       </td>
-                      <td className="px-6 py-4 text-sm text-gray-900 sm:text-base">
+                      <td className="px-6 py-4 text-lg text-gray-900 sm:text-lg">
                         NONE
                       </td>
                     </tr>
@@ -156,30 +157,30 @@ export default function Compare() {
 
         {/* Body copy (centered width, matches reference spacing) */}
         <section className="mx-auto mb-10 space-y-6 text-left max-w-none">
-          <h2 className="mb-6 text-3xl font-bold text-center text-gray-900 sm:text-4xl">
+          <h2 className="mb-6 text-3xl font-bold text-justify gray-900 text- sm:text-4xl">
             Work The Numbers And See Which Way Helps You Get There…
           </h2>
-          <div className="space-y-4 text-gray-700">
-            <p className="text-xl leading-relaxed sm:text-base">
+          <div className="space-y-4 text-gray-900">
+            <p className="text-xl leading-relaxed md:text-lg sm:text-base">
               When you really work the numbers you start to see the real benefits
               that each way of selling your LOUISIANA house offers.
             </p>
-            <p className="text-xl leading-relaxed sm:text-base">
+            <p className="text-xl leading-relaxed md:text-lg sm:text-base">
               Yes, here at Red Stick Property Solutions LLC we won't be able to offer you full
               retail value for your house... but we also offer other benefits that
               going the traditional house sale route can't offer.
             </p>
-            <p className="text-xl font-bold leading-relaxed sm:text-base">
+            <p className="text-xl font-bold leading-relaxed md:text-lg sm:text-base">
               Like…
             </p>
           </div>
 
           <div className="mt-8 space-y-6">
             <article className="text-left">
-              <h3 className="mb-3 text-xl font-bold text-gray-900 sm:text-2xl">
+              <h3 className="mb-3 text-xl font-bold text-gray-900 md:text-3xl sm:text-2xl">
                 From offer to close and cash in your hand in as little as 7 days
               </h3>
-              <p className="text-sm leading-relaxed text-gray-700 sm:text-base">
+              <p className="text-sm leading-relaxed text-gray-900 md:text-lg sm:text-base">
                 You can get rid of the headache of that property fast and <span className="font-bold underline">avoid paying any more utility payments</span>, tax
                 payments, <span className="font-bold">insurance</span> payments, <span className="font-bold">mortgage</span> payments, you get the drill. If you list your house and wait 90+ days to close... you have to figure in all of the costs of holding
                 that property during the time you have that property listed and are waiting for the property to close.
@@ -187,26 +188,26 @@ export default function Compare() {
             </article>
 
             <article className="text-left">
-              <h3 className="mb-3 text-xl font-bold text-gray-900 sm:text-2xl">
+              <h3 className="mb-3 text-xl font-bold text-gray-900 md:text-3xl sm:text-2xl">
                 Don't worry about fixing anything up or cleaning your house again and
                 again for buyer after buyer
               </h3>
-              <p className="text-sm leading-relaxed text-gray-700 sm:text-base">
+              <p className="text-sm leading-relaxed text-gray-900 md:text-lg sm:text-base">
                 We don't care how dirty your house is (<span className="italic">we've seen worse!</span>) or how many repairs are needed (<span className="italic">a complete fixer? great! we love projects</span>)...
                 <span className="text-blue-600 underline">we'd like to make an offer on your house</span>. This saves you time and money that you can keep in your pocket.
               </p>
             </article>
 
             <article className="text-left">
-              <h3 className="mb-3 text-xl font-bold text-gray-900 sm:text-2xl">
+              <h3 className="mb-3 text-xl font-bold text-gray-900 md:text-3xl sm:text-2xl">
                 Don't worry about paying those pesky closing fees (we've got you
                 covered)
               </h3>
-              <p className="mb-4 text-sm leading-relaxed text-gray-700 sm:text-base">
+              <p className="mb-4 text-gray-900 text-smleading-relaxed md:text-lg sm:text-base">
                 Because we are a <span className="font-bold">full-service professional home buyer here in LOUISIANA</span>, we make it easy for you. We pay for all of the closing costs.
                 What we offer you is what you get (of course minus any mortgage payoff or other encumbrances on the property). Pretty refreshing eh?
               </p>
-              <p className="text-sm leading-relaxed text-gray-700 sm:text-base">
+              <p className="text-sm leading-relaxed text-gray-900 md:text-lg sm:text-base">
                 So when you add up the time you could save by working with Red Stick Property Solutions LLC, the no-hassle experience, and the
                 money you'll save on commissions, fees, and holding costs while you wait to sell the traditional route... for many area home owners
                 selling to a professional house buyer is the best viable option.
@@ -216,20 +217,20 @@ export default function Compare() {
         </section>
 
         {/* CTA Section */}
-        <section className="mb-10 text-center">
+        <section className="mb-10">
           <p className="mb-6 text-lg font-bold text-gray-900">
             Is it for you?
           </p>
           <h2 className="mb-4 text-2xl font-bold text-gray-900 sm:text-3xl">
             See for yourself and get a fair all-cash offer on your house <span className="underline">today</span>.
           </h2>
-          <p className="max-w-4xl mx-auto mb-8 text-sm leading-relaxed text-gray-700 sm:text-base">
+          <p className="max-w-4xl mx-auto mb-8 ml-0 text-sm leading-relaxed text-gray-900 md:text-lg sm:text-base">
             Just fill out the short form below or give us a call at (225) 772-2747 and let's chat! <span className="text-blue-600 underline">Our process</span> is <span className="font-bold">simple</span> and you can <span className="font-bold underline">close on the
             date of your choice</span>. You have nothing to lose by getting an offer (no obligations – no pressure). But you could potentially lose
             thousands of dollars or months of your time by not testing us out and <span className="font-bold underline">requesting your FREE house offer below.</span>
           </p>
           
-          <h3 className="mb-6 text-xl font-bold text-gray-900 sm:text-2xl">
+          <h3 className="mb-6 text-xl font-bold text-center text-gray-900 md:text-3xl sm:text-2xl">
             What Do You Have To Lose? Get Started Now…
           </h3>
           
@@ -262,24 +263,32 @@ export default function Compare() {
           so you don't have to worry about our ability to close on a deal.
         </p>
 
-        {/* Social buttons */}
-        <div className="flex items-center gap-2 pt-12">
-          {/* Facebook button */}
-          <button className="flex items-center gap-2 bg-[#3b5998] text-white px-2 py-1 rounded-md hover:bg-[#2d4373] transition">
-            <FaFacebookF size={14} />
-            <span className="hidden text-sm md:inline">
-              Share
-            </span>
-          </button>
+       {/* Social buttons */}
+<div className="flex items-center gap-2 pt-12">
+  {/* Facebook button */}
+  <a
+    href="https://www.facebook.com/login/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex items-center gap-2 bg-[#3b5998] text-white px-2 py-1 rounded-md hover:bg-[#2d4373] transition"
+  >
+    <FaFacebookF size={14} />
+    <span className="hidden text-sm md:inline">Share</span>
+  </a>
 
-          {/* Twitter button */}
-          <button className="flex items-center gap-2 px-2 py-1 text-white transition bg-black rounded-md hover:bg-gray-800">
-            <FaXTwitter size={14} />
-            <span className="hidden text-sm md:inline">
-              Share
-            </span>
-          </button>
-        </div>
+  {/* Twitter button */}
+  <a
+    href="https://x.com/i/flow/login"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex items-center gap-2 px-2 py-1 text-white transition bg-black rounded-md hover:bg-gray-800"
+  >
+    <FaXTwitter size={14} />
+    <span className="hidden text-sm md:inline">Share</span>
+  </a>
+</div>
+ {/* Social buttons */}
+        
       </div>
     </main>
   );

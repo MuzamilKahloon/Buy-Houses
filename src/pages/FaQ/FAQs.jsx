@@ -72,11 +72,11 @@ export default function FAQ() {
         <p className="text-darkGray  text-[16px] lg:text-[18px] leading-[24px] lg:leading-[27px]  ">
           Great question, and we’re an open book: Our process is very
           straightforward. We look at the{" "}
-          <span className=" text-darkGray italic font-bold">location </span>of
+          <span className="italic font-bold  text-darkGray">location </span>of
           the property, what{" "}
-          <span className=" text-darkGray italic font-bold">repairs </span>are
+          <span className="italic font-bold  text-darkGray">repairs </span>are
           needed, the current{" "}
-          <span className=" text-darkGray italic font-bold"> condition</span> of
+          <span className="italic font-bold  text-darkGray"> condition</span> of
           the property, and values of comparable houses sold in the area
           recently. As you know, house values have taken a huge hit in the last
           5 years and most areas still haven’t seen prices come back up. We take
@@ -95,13 +95,13 @@ export default function FAQ() {
         <p className="text-darkGray text-[16px] md:text-[18px] leading-[24px] md:leading-[27px]  ">
           A: This is what makes us stand out from the traditional method of
           selling your house: There are{" "}
-          <span className=" text-darkGray underline font-samibold">
+          <span className="underline  text-darkGray font-samibold">
             {" "}
             NO fees{" "}
           </span>{" "}
           or commissions when you sell your house us. We’ll make you an offer,
           and if it’s a fit then we’ll buy your house (and{" "}
-          <span className=" text-darkGray underline font-samibold">
+          <span className="underline  text-darkGray font-samibold">
             {" "}
             we’ll often pay for the closing costs too!)
           </span>{" "}
@@ -162,7 +162,7 @@ export default function FAQ() {
   ];
 
   return (
-    <div className="min-h-screen bg-white sm:px-4 md:px-2 lg:px-6 py-4 font-primary">
+    <div className="min-h-screen py-4 bg-white sm:px-4 md:px-2 lg:px-6 font-primary">
       <div className="max-w-6xl mx-auto px-[4.8%] md:flex md:gap-8">
         {/* Left side - FAQ */}
         <div className="md:flex-1 md:mt-12 ">
@@ -192,7 +192,7 @@ export default function FAQ() {
           <div className="space-y-0">
             {faqData.map((item, index) => (
               <div key={index}>
-                <h3 className="font-bold  text-darkGray  tracking-normal ">
+                <h3 className="font-bold tracking-normal text-darkGray ">
                   {item.question}
                 </h3>
                 {item.answer && (
@@ -218,7 +218,7 @@ export default function FAQ() {
           </div>
 
           {/* Image text section */}
-          <div className="flex flex-col sm:flex-row gap-4 m-16">
+          <div className="flex flex-col gap-4 m-16 sm:flex-row">
             {/* Book Image */}
             <div className="flex-shrink-0">
               <img
@@ -231,7 +231,7 @@ export default function FAQ() {
             {/* Text beside the image */}
             <div>
               <p className="mb-4">
-                <span className="underline text-blue-600 cursor-pointer">
+                <span className="text-blue-600 underline cursor-pointer">
                   Download our FREE Guide here
                 </span>
                 , Or you can always feel free to Contact us anytime if you have
@@ -240,7 +240,7 @@ export default function FAQ() {
                 properties for cash.
               </p>
               <p>
-                Get the <span className="underline font-bold">FREE Guide</span>{" "}
+                Get the <span className="font-bold underline">FREE Guide</span>{" "}
                 and then give us a call at{" "}
                 <span className="font-bold">(225) 772-2747</span> and we’ll
                 discuss what your home is worth and what we can offer to buy it
@@ -251,25 +251,36 @@ export default function FAQ() {
           </div>
 
           {/* Social buttons with react-icons */}
-          <div className=" flex items-center gap-2 pt-12">
-            {/* Facebook button */}
-            <button className="flex items-center gap-2 bg-[#3b5998] text-white px-1 py-[1px] rounded-md hover:bg-[#2d4373] transition">
-              {/* Icon always visible */}
-              <FaFacebookF size={14} />
-              {/* Text hidden on mobile, visible on md+ */}
-              <span className="hidden md:inline  md:text-[14px]  md:leading-[22px]">
-                Share
-              </span>
-            </button>
+<div className="flex items-center gap-2 pt-12">
+  {/* Facebook button */}
+  <a
+    href="https://www.facebook.com/login/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex items-center gap-2 bg-[#3b5998] text-white px-1 py-[1px] rounded-md hover:bg-[#2d4373] transition"
+  >
+    {/* Icon always visible */}
+    <FaFacebookF size={14} />
+    {/* Text hidden on mobile, visible on md+ */}
+    <span className="hidden md:inline md:text-[14px] md:leading-[22px]">
+      Share
+    </span>
+  </a>
 
-            {/* Cross button */}
-            <button className="flex items-center gap-2 bg-black text-white px-1 py-[1px] rounded-md hover:bg-darkGray transition">
-              <FaXTwitter size={14} />
-              <span className="hidden md:inline text-[14px] md:text-[16px] leading-[20px] md:leading-[22px]">
-                Share
-              </span>
-            </button>
-          </div>
+  {/* Twitter (X) button */}
+  <a
+    href="https://x.com/i/flow/login"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex items-center gap-2 bg-black text-white px-1 py-[1px] rounded-md hover:bg-darkGray transition"
+  >
+    <FaXTwitter size={14} />
+    <span className="hidden md:inline text-[14px] md:text-[16px] leading-[20px] md:leading-[22px]">
+      Share
+    </span>
+  </a>
+</div>
+
         </div>
 
         {/* Right side */}

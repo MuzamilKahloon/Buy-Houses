@@ -12,7 +12,7 @@ const SellHousePage = () => {
   return (
     <>      
       <section className="px-4 md:px-[12%] py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 gap-12 md:grid-cols-3">
           {/* Main Content */}
           <div className="md:col-span-2 font-primary">
             <h2 className="text-[28px] md:text-[39px] tracking-tight font-bold mb-3 text-justify leading-[36px] md:leading-[45px] text-[#212529]">
@@ -21,7 +21,7 @@ const SellHousePage = () => {
               <u>An All Cash Offer…</u>
             </h2>
             <p className="mb-4 normal-size">See how...</p>
-            <p className="normal-size mb-2">
+            <p className="mb-2 normal-size">
               Are you currently facing any of these situations?
             </p>
 
@@ -63,7 +63,7 @@ const SellHousePage = () => {
               </li>
             </ul>
 
-            <p className="normal-size mt-4 text-left">
+            <p className="mt-4 text-left normal-size">
               If you answered “yes” to one or more of these questions, we can
               help!{" "}
               <u>
@@ -73,7 +73,7 @@ const SellHousePage = () => {
               , the homeowner. We can solve almost any financial problem that
               your property is causing.
             </p>
-            <p className="normal-size mt-2 text-left">
+            <p className="mt-2 text-left normal-size">
               We want to help you take control of your situation, end the
               hassles, and get back to living the life you want to live. And you
               deserve to know all of the options available to you right now.
@@ -83,7 +83,7 @@ const SellHousePage = () => {
               and we’ll present you with the options that can potentially change
               your life and help you get back to normal.
             </p>
-            <p className="normal-size mt-2 text-left">
+            <p className="mt-2 text-left normal-size">
               Send us information in the form below and we’ll get back to you
               promptly (usually within 24 hours) – we’ll give you a call and
               <u> show you the options to help solve your current situation.</u>
@@ -93,7 +93,7 @@ const SellHousePage = () => {
               <u>no hassle.</u> 100% <u>no obligation.</u> <u>No commitment.</u>
             </p>
 
-            <h3 className="text-2xl md:text-3xl font-bold mt-10 mb-6 text-[#212529]">
+            <h3 className="text-3xl md:text-4xl font-bold mt-10 mb-6 text-[#212529]">
               Fill Out The Form Below And <br />
               We’ll Chat With You Within 24 Hours
             </h3>
@@ -108,7 +108,7 @@ const SellHousePage = () => {
               buttonClass="w-full md:w-auto mt-2 bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 rounded-md transition-colors duration-300"
             />
 
-            <p className="normal-size text-center mt-10">
+            <p className="mt-10 text-center normal-size">
               <strong>Or give us a call at (225) 772-2747</strong> to chat with
               us over the phone
             </p>
@@ -119,14 +119,28 @@ const SellHousePage = () => {
             />
 
             {/* Socials */}
-            <ul className="flex gap-4 mt-16 justify-center md:justify-start">
-              <li className="facebook flex items-center bg-blue-600 text-[14px] rounded px-4">
-                <FaFacebookF className="text-white" />
-                <span className="ml-2 hidden md:inline">share</span>
+            <ul className="flex justify-center gap-4 mt-16 md:justify-start">
+              <li className="facebook">
+                <a
+                  href="https://www.facebook.com/login/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center bg-blue-600 text-[14px] rounded px-4"
+                >
+                  <FaFacebookF className="text-white" />
+                  <span className="hidden ml-2 text-white md:inline">share</span>
+                </a>
               </li>
-              <li className="twitter flex items-center bg-black text-white text-[14px] rounded px-4">
-                <FaXTwitter />
-                <span className="ml-2 hidden md:inline">share</span>
+              <li className="twitter">
+                <a
+                  href="https://x.com/i/flow/login"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center bg-black text-white text-[14px] rounded px-4"
+                >
+                  <FaXTwitter className="text-white" />
+                  <span className="hidden ml-2 md:inline">share</span>
+                </a>
               </li>
             </ul>
           </div>

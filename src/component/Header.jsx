@@ -49,10 +49,10 @@ const Header = () => {
           <div className="flex items-center gap-2">
             <img src={logo} alt="logo" className="w-16 h-16" />
             <div>
-              <h1 className="font-bold text-[38px] leading-[27px] pb-4">
+              <h1 className="font-bold text-[34px] leading-[27px] pb-4">
                 WeBuyHouses225.com
               </h1>
-              <p className="text-sm text-gray-700 text-[22px] leading-[21px]">
+              <p className="text-lg text-gray-800 text-[22px] leading-[21px]">
                 Need To Sell Your House Fast? We Buy Houses!
               </p>
             </div>
@@ -61,15 +61,15 @@ const Header = () => {
           {/* Links + Contact */}
           <div className="flex flex-col items-end gap-2">
             <div className="flex gap-6">
-              <Link to="/getcash" className="text-lg blue-600 text-">
+              <Link to="/getcash" className="text-lg text-blue-600">
                 Get A Cash Offer Today
               </Link>
               <Link to="/ourcompany" className="text-lg text-blue-600 ">
                 Our Company
               </Link>
             </div>
-            <p className="text-3xl font-bold text-gray-800">
-              Call Us! (225) 772-2747
+            <p className="text-3xl text-gray-800">
+              Call Us! <b>(225) 772-2747</b> 
             </p>
           </div>
         </div>

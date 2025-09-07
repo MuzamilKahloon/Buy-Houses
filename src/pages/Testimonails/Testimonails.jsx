@@ -7,11 +7,11 @@ import forbesLogo from "../../assets/imgi_4_Forbes-Logo.jpg";
 import { Listing, RecentPost } from "../../component/Export";
 export default function Testimonials() {
   return (
-    <div className="min-h-screen bg-white sm:px-4 md:px-6 lg:px-12 py-4 font-primary">
+    <div className="min-h-screen py-4 bg-white sm:px-4 md:px-6 lg:px-12 font-primary">
       {/* Main layout */}
       <div className="max-w-full mx-auto px-[6%] md:flex md:gap-12">
         {/* LEFT SIDE */}
-        <div className="md:flex-1 md:mt-12 space-y-6">
+        <div className="space-y-6 md:flex-1 md:mt-12">
           <h2 className="text-[35px] md:text-[39px] leading-[42.2px] md:leading-[47.5px] text-darkGray font-bold">
             What Others Say…
           </h2>
@@ -26,7 +26,7 @@ export default function Testimonials() {
             Want to share your own experience with us?{" "}
             <a
               href="#contact"
-              className="text-blue-600 hover:text-blue-800 underline transition-colors"
+              className="text-blue-600 underline transition-colors hover:text-blue-800"
             >
               Send us a note
             </a>{" "}
@@ -35,25 +35,36 @@ export default function Testimonials() {
           </p>
 
           {/* Social buttons */}
-          <div className=" flex items-center gap-2 pt-12">
-            {/* Facebook button */}
-            <button className="flex items-center gap-2 bg-[#3b5998] text-white px-1 py-[1px] rounded-md hover:bg-[#2d4373] transition">
-              {/* Icon always visible */}
-              <FaFacebookF size={14} />
-              {/* Text hidden on mobile, visible on md+ */}
-              <span className="hidden md:inline  md:text-[14px]  md:leading-[22px]">
-                Share
-              </span>
-            </button>
+<div className="flex items-center gap-2 pt-12 ">
+  {/* Facebook button */}
+  <a
+    href="https://www.facebook.com/login/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex items-center gap-2 bg-[#3b5998] text-white px-1 py-[1px] rounded-md hover:bg-[#2d4373] transition"
+  >
+    {/* Icon always visible */}
+    <FaFacebookF size={14} />
+    {/* Text hidden on mobile, visible on md+ */}
+    <span className="hidden md:inline md:text-[14px] md:leading-[22px]">
+      Share
+    </span>
+  </a>
 
-            {/* Cross button */}
-            <button className="flex items-center gap-2 bg-black text-white px-1 py-[1px] rounded-md hover:bg-darkGray transition">
-              <FaXTwitter size={14} />
-              <span className="hidden md:inline text-[14px] md:text-[16px] leading-[20px] md:leading-[22px]">
-                Share
-              </span>
-            </button>
-          </div>
+  {/* Twitter button */}
+  <a
+    href="https://x.com/i/flow/login"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex items-center gap-2 bg-black text-white px-1 py-[1px] rounded-md hover:bg-darkGray transition"
+  >
+    <FaXTwitter size={14} />
+    <span className="hidden md:inline text-[14px] md:text-[16px] leading-[20px] md:leading-[22px]">
+      Share
+    </span>
+  </a>
+</div>
+
           {/* Quoted text */}
           <blockquote className="pl-10 text-darkGray text-[14px] md:text-[18px] leading-[24px] md:leading-[27px]">
             “Quite often{" "}
@@ -66,11 +77,11 @@ export default function Testimonials() {
           </blockquote>
 
           {/* Forbes logo */}
-          <div className=" mr-9 flex justify-end">
+          <div className="flex justify-end mr-9">
             <img
               src={forbesLogo}
               alt="Forbes"
-              className="h-12 w-auto -mt-[52px]"
+              className="h-12 w-auto -mt-[32px]"
             />
           </div>
         </div>

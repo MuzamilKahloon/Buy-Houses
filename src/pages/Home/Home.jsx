@@ -145,7 +145,7 @@ const Home = () => {
               “I Need To Sell My House Fast In Baton Rouge!”
             </h2>
 
-            <h3 className="text-[20px] md:text-[30px] font-bold mb-6 text-[#212529] text-center md:text-left leading-tight">
+            <h3 className="text-[20px] md:text-[30px] font-bold mb-6 text-[#212529] md:text-left leading-tight">
               We Buy Houses Anywhere In Baton Rouge And Other Parts of LOUISIANA, And At Any Price.
               <Link to={"./works"} className="ml-2 text-blue-400 hover:text-blue-800">
                 Check Out How Our Process Works
@@ -162,7 +162,7 @@ const Home = () => {
             </p>
             
             <p className="text-[18px] md:text-[18px] mb-8 leading-relaxed text-gray-700">
-             <span className="text-blue-400">Avoiding foreclosure?</span>  House in PROBATE? Facing divorce? Moving? Upside down in your mortgage? Liens? It doesn’t matter whether you live in it, you’re renting it out, it’s vacant, or not even habitable. We help owners who have inherited an unwanted property, own a vacant house, are behind on payments, owe liens, downsized and can’t sell… even if the house needs repairs that you can’t pay for… and yes, even if the house is fire damaged or has bad rental tenants.
+             <span className="text-blue-400">Avoiding foreclosure?</span>  House in PROBATE? Facing divorce? <b> Moving? Upside down</b>  in your mortgage? <b>Liens?</b> It doesn’t matter whether you live in it, you’re renting it out, it’s vacant, or not even habitable. We help owners who have inherited an unwanted property, own a vacant house, are behind on payments, owe liens, downsized and can’t sell… even if the house needs repairs that you can’t pay for… and yes, even if the house is fire damaged or has bad rental tenants.
             </p>
             
             <p className="text-[18px] md:text-[18px] mb-8 leading-relaxed text-gray-700">
@@ -220,6 +220,12 @@ const Home = () => {
             
 
             <p className="text-[18px] mt-2 md:text-[18px] mb-8 leading-relaxed text-gray-700">  <b>Our goal is to help make your life easier and get you out from under the property that’s</b>  stressing you out… while still paying a fast, fair, and honest price for your house.</p>
+
+            <p className="mb-4 ml-8 text-3xl font-bold text-justify">What Do You Have To Lose? Get<br />Started Now..</p>
+
+            <p className="mb-6 ml-8 text-lg text-justify">
+              We buy houses in ANY CONDITION in LOUISIANA. There are no commissions or fees and no obligation whatsoever. Start below by giving us a bit of information about your property or call (225) 772-2747...
+            </p>
 
             <CashOffer />
 

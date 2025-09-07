@@ -19,14 +19,14 @@ const HowitsWorks = () => {
   }, []);
 
   return (
-    <div className="max-w-screen-xl px-4 mx-auto ml-10 sm:px-6 lg:px-8">
+    <div className="max-w-screen-xl px-4 mx-auto ml-16 sm:px-6 lg:px-8">
       {/* -----------------------------------------------------------------
           SECTION 1 – HOW THE PROCESS WORKS
       ------------------------------------------------------------------ */}
       <div className="flex flex-col py-8 bg-white lg:flex-row lg:py-12">
         {/* ---------------- LEFT SIDE (steps) ---------------- */}
-        <div className="flex-1 ml-6 mb-8 lg:pr-8 lg:mb-0">
-          <h2 className="mb-6 text-4xl font-bold text-center text-gray-800 sm:text-5xl lg:text-6xl lg:text-left">
+        <div className="flex-1 mb-8 ml-6 lg:pr-8 lg:mb-0">
+          <h2 className="mb-6 text-xl font-bold text-center text-gray-800 sm:text-4xl md:text-4xl lg:text-left">
             How The Process Works
           </h2>
 
