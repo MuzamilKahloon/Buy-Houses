@@ -29,7 +29,7 @@ export default function OurCompany() {
           </section>
           
           <p className="mt-8 mb-6 text-lg">
-          When you need some cash urgently or have to shift to a different town or a city on short notice, you would want to sell your house quickly. Selling your house is not a very convenient process. While the documentation process takes a lot of time, finding the right buyer is not easy either. There … <span className="text-blue-600">Continued</span>
+          When you need some cash urgently or have to shift to a different town or a city on short notice, you would want to sell your house quickly. Selling your house is not a very convenient process. While the documentation process takes a lot of time, finding the right buyer is not easy either. There … <span className="text-blue-600">...Continued</span>
         </p>
 
 
@@ -95,7 +95,7 @@ export default function OurCompany() {
           </p>
 
            <p className="mt-8 mb-6 text-lg">
-          We buy “probate houses” as is. This means that you don’t have to hire a contractor and spend thousands of dollars getting the items removed from the house. This also means that you don’t have to spend thousands or tens of thousands of dollars in repairs so that you can actually sell the house. We <span className="text-blue-600">Continued</span>
+          We buy “probate houses” as is. This means that you don’t have to hire a contractor and spend thousands of dollars getting the items removed from the house. This also means that you don’t have to spend thousands or tens of thousands of dollars in repairs so that you can actually sell the house. We <span className="text-blue-600">...Continued</span>
         </p>
 
 
@@ -110,7 +110,7 @@ export default function OurCompany() {
           </p>
 
           <p className="mt-8 mb-6 text-lg">
-         When a relative dies, his or her property must go through a succession. Basically, a succession is the formal process of placing the decedent’s assets into the hands of his/her legal heirs.  Often, this is also referred to as a “probate” process.  There are many legal technicalities when is comes to this process.  Does this <span className="text-blue-600">Continued</span>
+         When a relative dies, his or her property must go through a succession. Basically, a succession is the formal process of placing the decedent’s assets into the hands of his/her legal heirs.  Often, this is also referred to as a “probate” process.  There are many legal technicalities when is comes to this process.  Does this <span className="text-blue-600">...Continued</span>
         </p>
 
 
