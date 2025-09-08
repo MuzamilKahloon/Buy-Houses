@@ -5,24 +5,24 @@ import bookimage from "../../assets/imgi_1_selling-to-a-professional-188x300.png
 
 export default function OurCompany() {
   return (
-    <div className="min-h-screen bg-white sm:px-4 md:px-6 lg:px-12 py-8 font-primary">
+    <div className="min-h-screen py-8 bg-white sm:px-4 md:px-6 lg:px-12 font-primary">
       {/* Main Layout */}
       <div className="max-w-full mx-auto px-[6%] md:flex md:gap-12">
         
         {/* LEFT SIDE (Flyer Content) */}
         <div className="md:w-[68.4%] text-darkGray leading-relaxed">
           {/* About Section */}
-          <h2 className="text-xl font-bold mb-3">
+          <h2 className="mb-3 text-4xl font-bold">
             About Red Stick Property Solutions LLC
           </h2>
-          <p className="mb-4">
+          <p className="mb-4 text-lg">
             We provide win win solutions to help homeowners get out of their
             sticky situations… like Foreclosure, owning a burdensome property,
             probate, or anything else. At Red Stick Property Solutions LLC, we
             focus on providing you with a solution to your situation so you can
             continue to do the things you love.
           </p>
-          <p className="mb-6">
+          <p className="mb-6 text-lg">
             Red Stick Property Solutions LLC is a real estate solutions company
             based out of Prairieville. We’re a family owned business and focus
             on helping homeowners like you find solutions for your problem
@@ -31,32 +31,32 @@ export default function OurCompany() {
           </p>
 
           {/* How We Work Section */}
-          <h2 className="text-lg font-bold mb-3">
+          <h2 className="mb-3 text-4xl font-bold">
             How We Work With Homeowners
           </h2>
-          <p className="mb-6">
+          <p className="mb-6 text-lg">
             If you have any questions about how we work, what the process of
             selling a house or having us help you avoid foreclosure, or just
             want to learn more about us… don’t hesitate to contact us anytime!
           </p>
 
           {/* Call Section */}
-          <p className="font-bold text-base mb-8">
+          <p className="mb-8 text-4xl font-bold">
             Call Red Stick Property Solutions LLC Today!{" "}
-            <span className="font-bold underline">(225) 772-2747</span>
+            <span>(225) 772-2747</span>
           </p>
 
           {/* Divider */}
           <hr className="my-6 border-gray-300" />
 
           {/* Pros & Cons Section */}
-          <h2 className="text-lg font-bold mb-3">
+          <h2 className="mb-5 text-3xl font-bold">
             The Pros & Cons Of Selling Your House To A Local Professional Home
             Buyer– <span className="underline">FREE Guide:</span>
           </h2>
 
           {/* Image + Text Layout */}
-          <div className="flex flex-col sm:flex-row gap-4 mb-4">
+          <div className="flex flex-col gap-4 mb-4 sm:flex-row">
             {/* Book Image */}
             <div className="flex-shrink-0">
               <img
@@ -68,17 +68,17 @@ export default function OurCompany() {
 
             {/* Text beside the image */}
             <div>
-              <p className="mb-4">
-                <span className="underline text-blue-600 cursor-pointer">
+              <p className="mb-4 text-lg">
+                <span className="text-blue-600 underline cursor-pointer">
                   Download our FREE Guide here
                 </span>
-                , Or you can always feel free to Contact us anytime if you have
+                , Or you can always feel free to <span className="text-blue-600">Contact us </span> anytime if you have
                 questions, want a no hassle Situation Evaluation, or want to
                 just learn more about how we can help homeowners sell unwanted
                 properties for cash.
               </p>
-              <p>
-                Get the <span className="underline font-bold">FREE Guide</span>{" "}
+              <p className="text-lg">
+                Get the <span className="font-bold underline">FREE Guide</span>{" "}
                 and then give us a call at{" "}
                 <span className="font-bold">(225) 772-2747</span> and we’ll
                 discuss what your home is worth and what we can offer to buy it

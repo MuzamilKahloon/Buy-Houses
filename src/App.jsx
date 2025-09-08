@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 
 // Components
-import { Header, } from "./component/Export";
+import { Header } from "./component/Export";
 import CashOffer from "./component/CashOffer";
 import Footer from "./component/Footer";
 
@@ -13,7 +13,8 @@ import { Home, Compare, SellHome, Works } from "./pages/Export";
 import GetACash from "./pages/GetACash/GetACash";
 import SellHousePage from "./pages/SellYourHouse/SellYourHome";
 import OurCompany from "./pages/OurComapany/OurCompany";
-
+import Privacy from "./pages/Privacypolicy";
+import Blog from "./pages/Blog";
 
 const App = () => {
   return (
@@ -28,10 +29,11 @@ const App = () => {
         <Route path="/compare" element={<Compare />} />
         <Route path="/sellhome" element={<SellHousePage />} />
         <Route path="/work" element={<Works />} />
-        <Route path="/ourcompany" element={<OurCompany/>} />
-        <Route path="/getcash" element={<GetACash/>} />
+        <Route path="/ourcompany" element={<OurCompany />} />
+        <Route path="/getcash" element={<GetACash />} />
+        <Route path="/privacy" element={<Privacy />} />
+        <Route path="/blog" element={<Blog />} />
       </Routes>
-
       <Footer />
     </>
   );

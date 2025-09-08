@@ -7,26 +7,26 @@ import { Listing, RecentPost } from "../../component/Export";
 
 export default function GetaCash() {
   return (
-    <div className="min-h-screen bg-white sm:px-4 md:px-6 lg:px-12 py-8 font-primary">
+    <div className="min-h-screen py-8 bg-white sm:px-4 md:px-6 lg:px-12 font-primary">
       {/* Main layout */}
       <div className="max-w-full mx-auto px-[6%] md:flex md:gap-12">
         {/* LEFT SIDE */}
         <div className="md:w-[68.4%] w-full font-primary text-darkGray relative">
           {/* Headings */}
-          <h1 className="text-[22px] md:text-[28px] font-bold leading-snug">
+          <h1 className="text-[22px] md:text-4xl font-bold leading-snug">
             Sell Your House{" "}
-            <span className="text-blue-600 underline">This Week</span>
+            <span className="underline ">This Week</span>
           </h1>
-          <h2 className="text-[20px] md:text-[24px] font-bold mt-2">
+          <h2 className="text-[20px] md:text-4xl font-bold mt-2">
             We Buy Baton Rouge Houses{" "}
             <span className="italic font-extrabold">Fast!</span>
           </h2>
-          <h2 className="text-[20px] md:text-[24px] font-bold ">
+          <h2 className="text-[20px] md:text-4xl font-bold ">
             … And Give You A Fair Cash Offer
           </h2>
 
           {/* Paragraph 1 */}
-          <p className="mt-4 text-[15px] md:text-[17px] leading-relaxed md:w-[70%]">
+          <p className="mt-4 text-[15px] md:text-lg text-justify leading-relaxed md:w-[70%]">
             Selling a house can be stressful, time-consuming, and expensive. We
             can eliminate that stress and give you the peace of mind that comes
             with knowing your house hassles are completely done – without having
@@ -35,7 +35,7 @@ export default function GetaCash() {
           </p>
 
           {/* Highlighted red text */}
-          <p className="mt-4 font-semibold text-red-600">
+          <p className="mt-4 font-semibold underline md:text-lg">
             We work with people every week who need to sell their house fast.
           </p>
           
@@ -43,19 +43,19 @@ export default function GetaCash() {
           <img
             src={arrowright}
             alt="Arrow Right"
-            className="hidden md:block absolute top-20  left-[75%] w-32 h-auto"
+            className="hidden md:block absolute top-24  left-[75%] w-32 h-auto"
           />
 
           {/* Paragraph 2 */}
-          <p className="mt-4 text-[15px] md:text-[17px] leading-relaxed">
+          <p className="mt-4 text-[15px] md:text-lg leading-relaxed">
             From people in <span className="font-bold">foreclosure</span>, going
-            through a <span className="font-bold">divorce</span>, relocating and
-            can't sell their house, those who own a vacant house they don't want
-            to deal with anymore… to landlords tired of dealing with tenants,
-            people who inherited a house they don't want, good folks who lost
-            their job and just can't afford the payment any more and can't
+            through a <span className="font-bold">divorce</span>,<b>relocating</b>  and
+            can't sell their house, those who own a <b>vacant house</b> they don't want
+            to deal with anymore… to <b>landlords tired</b> of dealing with tenants,
+            people who <b>inherited a house</b> they don't want, good folks who <b>lost
+            their job</b> and just can't afford the payment any more and can't
             afford to pay a real estate agent their fees to sell it, to people
-            who owe more on their house than it's worth and listing with an
+            who <b>owe more on their house than it's worth</b> and listing with an
             agent just isn't an option.
           </p>
 
@@ -65,7 +65,7 @@ export default function GetaCash() {
           </h3>
 
           {/* Bullet list */}
-          <ul className="list-disc list-inside mt-2 space-y-1 text-[15px] md:text-[17px]">
+          <ul className="list-disc text-justify list-inside mt-2 space-y-1 text-[15px] md:text-lg">
             <li>They deserve to receive fair treatment</li>
             <li>
               They need a quick solution that puts cash in their pocket right
@@ -81,12 +81,12 @@ export default function GetaCash() {
           </ul>
 
           {/* Paragraph 3 */}
-          <p className="mt-4 text-[15px] md:text-[17px]">
+          <p className="mt-4 text-[15px] md:text-lg">
             …and we can help them achieve all of these.
           </p>
 
           {/* Final line with bold number */}
-          <p className="mt-6 text-[15px] md:text-[17px]">
+          <p className="mt-6 text-[15px] md:text-lg">
             If you want to sell your house, just fill out the quick form below.
             Or give us a{" "}
             <span className="font-bold">call right now at (225) 772-2747</span>.
@@ -103,23 +103,23 @@ export default function GetaCash() {
           <img
             src={privacy}
             alt="privacy"
-            className="hidden md:block absolute justify-center items-center p-[10px] w-full max-h-max"
+            className="hidden md:block p-[10px] w-50 max-h-max"
           />
 
           <div className="w-full font-primary text-darkGray bg-white px-[6%] py-8">
             {/* Heading */}
-            <h2 className="text-[20px] md:text-[24px] font-bold mb-4">
+            <h2 className="text-[20px] md:text-4xl font-bold mb-4">
               So Who Are We?
             </h2>
 
             {/* Paragraph 1 */}
-            <p className="text-[15px] md:text-[17px] leading-relaxed mb-4">
+            <p className="text-[15px] text-justify md:text-lg leading-relaxed mb-4">
               <span className="font-bold text-black">
                 Red Stick Property Solutions LLC is the Baton Rouge area's most
                 respected house buying service.
               </span>{" "}
               We are a highly experienced{" "}
-              <span className="text-blue-600 underline">home buying team</span>{" "}
+              <span className="underline ">home buying team</span>{" "}
               that is focused on helping homeowners like you to sell your house
               fast, without any hassle, games, or fees, and we're committed to
               delivering this service with transparency and integrity throughout
@@ -127,7 +127,7 @@ export default function GetaCash() {
             </p>
 
             {/* Paragraph 2 */}
-            <p className="text-[15px] md:text-[17px] leading-relaxed mb-4">
+            <p className="text-[15px] md:text-lg text-justify leading-relaxed mb-4">
               <span className="font-bold">We buy houses</span> all over the
               country, including Baton Rouge and surrounding areas. We know the
               area, which means our home buying team can help you sell your
@@ -136,7 +136,7 @@ export default function GetaCash() {
             </p>
 
             {/* Paragraph 3 */}
-            <p className="text-[15px] md:text-[17px] leading-relaxed mb-4">
+            <p className="text-[15px] md:text-lg text-justify leading-relaxed mb-4">
               Again, we're not agents who are trying to sell your house to
               others. We are professional house buyers, which means we have our
               own cash and are ready to buy. We can even make you an offer on
@@ -148,26 +148,35 @@ export default function GetaCash() {
             </p>
 
             {/* Subheading */}
-            <h3 className="text-[16px] md:text-[18px] font-bold mb-2">
+            <h3 className="text-[16px] md:text-xl font-bold mb-2">
               Can I stop or avoid foreclosure by selling my house?
             </h3>
 
             {/* Paragraph 4 */}
-            <p className="text-[15px] md:text-[17px] leading-relaxed mb-4">
+            <p className="text-[15px] md:text-lg leading-relaxed mb-4">
               Yes, in many cases. When you sell your house it stops foreclosure
               and may help save your credit. Download our{" "}
               <span className="text-blue-600 underline">
-                "How To Stop Foreclosure"
+               <i>"How To Stop Foreclosure"</i> 
               </span>{" "}
               free report for more information.
             </p>
 
             {/* Final line */}
-            <p className="text-[15px] md:text-[17px] leading-relaxed font-semibold">
-              Call Us Now at <span className="font-bold">(225) 772-2747</span>{" "}
+            <p className="text-[15px] md:text-lg leading-relaxed ">
+             <b> Call Us Now at (225) 772-2747</b>
               or fill out the quick form below to get started.
             </p>
           </div>
+
+          <p className="ml-10 text-4xl font-bold text-black">
+            We’ll Make You An Offer Within 24 Hours.
+You Decide If It’s A Fit or Not. It’s That Easy And Stress-Free
+          </p>
+
+          <p className="mt-6 ml-10 text-lg text-black">Fill out the quick form below to get an offer on your house TODAY!</p>
+
+          <p className="mt-10 ml-8 text-3xl font-bold">What Do You Have To Lose? Get Started Now...</p>
 
           <CashOffer
             title="Get Your Fair Cash Offer Today!"
