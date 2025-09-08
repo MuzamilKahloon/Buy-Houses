@@ -96,7 +96,7 @@ const Header = () => {
             <li className="text-xl cursor-pointer">FAQs</li>
           </Link>
           <Link to={"/contact"}>
-            <li className="text-xl cursor-pointer">Contact</li>
+            <li className="text-xl cursor-pointer">Contact Us</li>
           </Link>
         </ul>
       </nav>
