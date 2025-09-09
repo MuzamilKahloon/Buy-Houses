@@ -67,10 +67,8 @@ const Footer = () => {
 
         {/* Copyright */}
         <p className="text-darkGray text-[19px] md:text-[15px] leading-[23px] md:leading-[23px]">
-          © 2025 Red Stick Property Solutions LLC - Powered by{" "}
-          <a href="#" className="text-black underline hover:text-darkGray">
-            Carrot
-          </a>
+          © 2025 Red Stick Property Solutions LLC 
+          
         </p>
       </div>
     </footer>
