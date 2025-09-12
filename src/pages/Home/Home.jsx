@@ -3,6 +3,7 @@ import ReCAPTCHA from "react-google-recaptcha";
 import '../css/Home.css';
 import { Listing, RecentPost, CashOffer, Testimonials } from "../../component/Export";
 import { Link } from "react-router-dom";
+import Notification from "../../component/Notification";
 
 import arrowImg from "../../assets/imgi_2_arrow_right_01.png";
 import sellout from "../../assets/imgi_3_sell-your-house-fast.png";
@@ -10,19 +11,65 @@ import sellout from "../../assets/imgi_3_sell-your-house-fast.png";
 const Home = () => {
   const recaptchaRef = useRef();
   const [recaptchaToken, setRecaptchaToken] = useState(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [notification, setNotification] = useState({ show: false, message: '', type: '' });
 
   const handleRecaptchaChange = (token) => {
     setRecaptchaToken(token);
   };
 
-  const handleFormSubmit = (e) => {
+  const closeNotification = () => {
+    setNotification({ ...notification, show: false });
+  };
+
+  const handleFormSubmit = async (e) => {
     e.preventDefault();
+    
     if (!recaptchaToken) {
-      alert("Please complete the reCAPTCHA verification");
+      setNotification({
+        show: true,
+        message: 'Please complete the reCAPTCHA verification',
+        type: 'error'
+      });
       return;
     }
-    // Handle form submission logic here
-    console.log("Form submitted with reCAPTCHA token:", recaptchaToken);
+
+    const formData = new FormData(e.target);
+    formData.append('g-recaptcha-response', recaptchaToken);
+    
+    try {
+      setIsSubmitting(true);
+      const response = await fetch('https://formspree.io/f/xwpnzlbr', {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        setNotification({
+          show: true,
+          message: 'Form submitted successfully! We will contact you soon.',
+          type: 'success'
+        });
+        e.target.reset();
+        setRecaptchaToken(null);
+        if (recaptchaRef.current) {
+          recaptchaRef.current.reset();
+        }
+      } else {
+        throw new Error('Form submission failed');
+      }
+    } catch (error) {
+      setNotification({
+        show: true,
+        message: 'Failed to submit form. Please try again later.',
+        type: 'error'
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -79,12 +126,20 @@ const Home = () => {
         </p>
 
         {/* Form */}
-        <form onSubmit={handleFormSubmit} className="space-y-3 md:space-y-4">
+        <form onSubmit={handleFormSubmit} className="space-y-3 md:space-y-4" method="POST" action="https://formspree.io/f/xwpnzlbr">
+          {notification.show && (
+            <Notification
+              message={notification.message}
+              type={notification.type}
+              onClose={closeNotification}
+            />
+          )}
           {/* Property Address */}
           <div>
             <label className="block mb-1 text-xs font-medium text-gray-700 sm:text-sm">Property Address *</label>
             <input
               type="text"
+              name="address"
               placeholder="Enter Your Address"
               required
               className="w-full h-[38px] sm:h-[44px] md:h-[48px] px-3 sm:px-4 border border-gray-300 rounded-md text-[13px] sm:text-[14px] md:text-[15px] focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
@@ -97,6 +152,7 @@ const Home = () => {
               <label className="block mb-1 text-xs font-medium text-gray-700 sm:text-sm">Phone *</label>
               <input
                 type="tel"
+                name="phone"
                 required
                 className="w-full h-[38px] sm:h-[44px] md:h-[48px] px-3 sm:px-4 border border-gray-300 rounded-md text-[13px] sm:text-[14px] md:text-[15px] focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
               />
@@ -105,6 +161,7 @@ const Home = () => {
               <label className="block mb-1 text-xs font-medium text-gray-700 sm:text-sm">Email *</label>
               <input
                 type="email"
+                name="email"
                 required
                 className="w-full h-[38px] sm:h-[44px] md:h-[48px] px-3 sm:px-4 border border-gray-300 rounded-md text-[13px] sm:text-[14px] md:text-[15px] focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
               />
@@ -127,9 +184,10 @@ const Home = () => {
           {/* Submit button */}
           <button
             type="submit"
-            className="w-full h-[40px] sm:h-[48px] md:h-[52px] bg-[#ff8c42] hover:bg-[#e67a35] text-white font-bold text-[13px] sm:text-[15px] md:text-[16px] rounded-md transition-colors"
+            disabled={isSubmitting}
+            className={`w-full h-[40px] sm:h-[48px] md:h-[52px] bg-[#ff8c42] hover:bg-[#e67a35] text-white font-bold text-[13px] sm:text-[15px] md:text-[16px] rounded-md transition-colors ${isSubmitting ? 'opacity-70 cursor-not-allowed' : ''}`}
           >
-            Get My Fair Cash Offer ››
+            {isSubmitting ? 'Submitting...' : 'Get My Fair Cash Offer ››'}
           </button>
         </form>
       </div>

@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
+import Notification from "./Notification";
 
 const CashOffer = ({
   title,
@@ -10,9 +11,62 @@ const CashOffer = ({
   inputClass = "w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-orange-400",
   buttonClass = "mt-2 bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 rounded-md transition-colors duration-300 w-full",
 }) => {
-  // handle captcha value
+  const [notification, setNotification] = useState({ show: false, message: '', type: '' });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [recaptchaToken, setRecaptchaToken] = useState(null);
+
   const handleCaptchaChange = (value) => {
-    console.log("Captcha value:", value);
+    setRecaptchaToken(value);
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    
+    if (!recaptchaToken) {
+      setNotification({
+        show: true,
+        message: 'Please complete the reCAPTCHA verification',
+        type: 'error'
+      });
+      return;
+    }
+
+    const formData = new FormData(e.target);
+    formData.append('g-recaptcha-response', recaptchaToken);
+    
+    try {
+      setIsSubmitting(true);
+      const response = await fetch('https://formspree.io/f/xwpnzlbr', {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        setNotification({
+          show: true,
+          message: 'Form submitted successfully! We will contact you soon.',
+          type: 'success'
+        });
+        e.target.reset();
+      } else {
+        throw new Error('Form submission failed');
+      }
+    } catch (error) {
+      setNotification({
+        show: true,
+        message: 'Failed to submit form. Please try again later.',
+        type: 'error'
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  const closeNotification = () => {
+    setNotification({ ...notification, show: false });
   };
 
   return (
@@ -27,7 +81,14 @@ const CashOffer = ({
       )}
 
       {/* Form */}
-      <form className="flex flex-col gap-4">
+      <form className="flex flex-col gap-4" onSubmit={handleSubmit} method="POST" action="https://formspree.io/f/xwpnzlbr">
+        {notification.show && (
+          <Notification
+            message={notification.message}
+            type={notification.type}
+            onClose={closeNotification}
+          />
+        )}
         {/* Property Address */}
         <div>
           <label className="block mb-1 text-sm font-medium" htmlFor="address">
@@ -36,8 +97,10 @@ const CashOffer = ({
           <input
             type="text"
             id="address"
+            name="address"
             placeholder="Enter Your Address"
             className={inputClass}
+            required
           />
         </div>
 
@@ -48,10 +111,12 @@ const CashOffer = ({
               Phone
             </label>
             <input
-              type="text"
+              type="tel"
               id="phone"
+              name="phone"
               placeholder="Enter Phone"
               className={inputClass}
+              required
             />
           </div>
           <div>
@@ -61,8 +126,10 @@ const CashOffer = ({
             <input
               type="email"
               id="email"
+              name="email"
               placeholder="Enter Email"
               className={inputClass}
+              required
             />
           </div>
         </div>
@@ -80,8 +147,12 @@ const CashOffer = ({
         </div>
 
         {/* Submit Button */}
-        <button type="submit" className={buttonClass}>
-          Get My Fair Cash Offer »
+        <button 
+          type="submit" 
+          className={`${buttonClass} ${isSubmitting ? 'opacity-70 cursor-not-allowed' : ''}`}
+          disabled={isSubmitting}
+        >
+          {isSubmitting ? 'Submitting...' : 'Get My Fair Cash Offer »'}
         </button>
       </form>
     </div>

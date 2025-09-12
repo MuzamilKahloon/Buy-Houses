@@ -1,22 +1,70 @@
-import React from 'react';
+import React, { useState } from 'react';
+import ReCAPTCHA from 'react-google-recaptcha';
+import Notification from '../../component/Notification';
 
 const HowitsWorks = () => {
-  /* ----------  helper: inject the real reCAPTCHA  ---------- */
-  React.useEffect(() => {
-    const script = document.createElement('script');
-    script.src = 'https://www.google.com/recaptcha/api.js';
-    script.async = true;
-    script.defer = true;
-    document.body.appendChild(script);
+  const [notification, setNotification] = useState({ show: false, message: '', type: '' });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [recaptchaToken, setRecaptchaToken] = useState(null);
+  const recaptchaRef = React.useRef();
 
-    return () => {
-      /* optional clean-up if you ever un-mount this page */
-      const scripts = document.querySelectorAll(
-        'script[src*="google.com/recaptcha"]'
-      );
-      scripts.forEach((s) => s.remove());
-    };
-  }, []);
+  const handleCaptchaChange = (token) => {
+    setRecaptchaToken(token);
+  };
+
+  const closeNotification = () => {
+    setNotification({ ...notification, show: false });
+  };
+
+  const handleFormSubmit = async (e) => {
+    e.preventDefault();
+    
+    if (!recaptchaToken) {
+      setNotification({
+        show: true,
+        message: 'Please complete the reCAPTCHA verification',
+        type: 'error'
+      });
+      return;
+    }
+
+    const formData = new FormData(e.target);
+    formData.append('g-recaptcha-response', recaptchaToken);
+    
+    try {
+      setIsSubmitting(true);
+      const response = await fetch('https://formspree.io/f/xwpnzlbr', {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        setNotification({
+          show: true,
+          message: 'Form submitted successfully! We will contact you soon.',
+          type: 'success'
+        });
+        e.target.reset();
+        setRecaptchaToken(null);
+        if (recaptchaRef.current) {
+          recaptchaRef.current.reset();
+        }
+      } else {
+        throw new Error('Form submission failed');
+      }
+    } catch (error) {
+      setNotification({
+        show: true,
+        message: 'Failed to submit form. Please try again later.',
+        type: 'error'
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <div className="max-w-screen-xl px-4 mx-auto ml-16 sm:px-6 lg:px-8">
@@ -210,7 +258,14 @@ const HowitsWorks = () => {
               772-2747...
             </p>
 
-            <form>
+            <form onSubmit={handleFormSubmit} method="POST" action="https://formspree.io/f/xwpnzlbr">
+              {notification.show && (
+                <Notification
+                  message={notification.message}
+                  type={notification.type}
+                  onClose={closeNotification}
+                />
+              )}
               {/* Address */}
               <div className="mb-4">
                 <label className="block mb-2 text-sm font-bold text-gray-700">
@@ -218,6 +273,7 @@ const HowitsWorks = () => {
                 </label>
                 <input
                   type="text"
+                  name="address"
                   placeholder="Enter Your Address"
                   className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500"
                   required
@@ -232,6 +288,7 @@ const HowitsWorks = () => {
                   </label>
                   <input
                     type="tel"
+                    name="phone"
                     className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500"
                   />
                 </div>
@@ -241,22 +298,30 @@ const HowitsWorks = () => {
                   </label>
                   <input
                     type="email"
+                    name="email"
                     className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500"
                     required
                   />
                 </div>
               </div>
 
-              {/* REAL reCAPTCHA */}
+              {/* reCAPTCHA */}
               <div className="mb-6">
-                <div
-                  className="g-recaptcha"
-                  data-sitekey="6LcRYcArAAAAAGDKZrl7FIl0mar5xzipjZTOM8Hi"
-                />
+                <div className="flex justify-center">
+                  <ReCAPTCHA
+                    ref={recaptchaRef}
+                    sitekey="6LcRYcArAAAAAGDKZrl7FIl0mar5xzipjZTOM8Hi"
+                    onChange={handleCaptchaChange}
+                  />
+                </div>
               </div>
 
-              <button className="w-full px-6 py-3 text-base font-bold text-white transition-colors bg-orange-500 rounded md:text-lg hover:bg-orange-600">
-                Get My Fair Cash Offer ››
+              <button 
+                type="submit" 
+                disabled={isSubmitting}
+                className={`w-full px-6 py-3 text-base font-bold text-white transition-colors rounded md:text-lg ${isSubmitting ? 'bg-orange-400 cursor-not-allowed' : 'bg-orange-500 hover:bg-orange-600'}`}
+              >
+                {isSubmitting ? 'Submitting...' : 'Get My Fair Cash Offer ››'}
               </button>
             </form>
           </div>
